@@ -1,0 +1,91 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+}
+
+.nav {
+    margin: 0.5rem 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 50px;
+}
+
+.nav h1 {
+
+}
+
+.nav img {
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+}
+
+.menus {
+    margin: 0 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#output {
+    margin: 1rem 2%;
+    min-width: 96%;
+    min-height: 35vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.menus .tag textarea {
+    min-height: 35vh;
+    border: none;
+    line-height: 20px;
+    width: 100%;
+    outline: none;
+}
+
+.tag {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    margin-right: 2%;
+}
+
+.tagg {
+    background-color: #ffffff;
+    width: 100px;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tagg img {
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem;
+}
+
+.tagg p {
+    color: #000000;
+}
+
+.editor-child {
+    display: flex;
+    flex-direction: row;
+    background-color: #1D1E22;
+}
+
+.line-numbers{
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

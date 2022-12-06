@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Online Code Editor</title>
+</head>
+<body>
+    <div class="nav">
+        <h1>Online Code Editor</h1>
+        <img src="./icons/github-icon.png"/>
+    </div>
+    <div class="editor">
+        <div class="menus">
+            <div class="tag">
+                <div class="tagg">
+                    <img src="./icons/html-icon.svg"/>
+                    <p>HTML</p>
+                </div>
+                <div class="editor-child">
+                    <div id="line-numbershtml" class="line-numbers"></div>
+                    <textarea id="html-code"></textarea>
+                </div>
+            </div>
+            <div class="tag">
+                <div class="tagg">
+                    <img src="./icons/css-icon.svg"/>
+                    <p>CSS</p>
+                </div>
+                <div class="editor-child">
+                    <div id="line-numberscss" class="line-numbers"></div>
+                    <textarea id="css-code"></textarea>
+                </div>
+            </div>
+            <div class="tag">
+                <div class="tagg">
+                    <img src="./icons/js-icon.svg"/>
+                    <p>JS</p>
+                </div>
+                <div class="editor-child">
+                    <div id="line-numbersjs" class="line-numbers"></div>
+                    <textarea id="js-code"></textarea>
+                </div>
+            </div>
+        </div>
+        <iframe id="output">
+        </iframe>
+    </div>
+    <h5 style="text-align: center">Copyright © Mateo Pizzolo</h5>
+
+    <script type="text/javascript">
+        function run(){
+            let htmlCode = document.getElementById("html-code").value;
+            let cssCode = "<style>" + document.getElementById("css-code").value + "</style>";
+            let jsCode = document.getElementById("js-code").value;
+            let output = document.getElementById("output");
+            
+            output.contentDocument.body.innerHTML = htmlCode + cssCode + jsCode;
+            output.contentWindow.eval(jsCode);
+        }
+
+        function lineCounterJs(){
+            let jsCode = document.getElementById("js-code").value;
+            let lineNumbers = document.querySelector("#line-numbersjs");
+            let lines = jsCode.split("\n");
+            let lineCount = lines.length;
+            let lineNumbersHtml = "";
+            for(let i = 0; i <= lineCount - 1; i++){
+                lineNumbersHtml += "<span>" + i + "</span>";
+            }
+            lineNumbers.innerHTML = lineNumbersHtml;
+        }
+
+        function lineCounterCss(){
+            let jsCode = document.getElementById("css-code").value;
+            let lineNumbers = document.querySelector("#line-numberscss");
+            let lines = jsCode.split("\n");
+            let lineCount = lines.length;
+            let lineNumbersHtml = "";
+            for(let i = 0; i <= lineCount - 1; i++){
+                lineNumbersHtml += "<span>" + i + "</span>";
+            }
+            lineNumbers.innerHTML = lineNumbersHtml;
+        }
+
+        function lineCounterHtml(){
+            let jsCode = document.getElementById("html-code").value;
+            let lineNumbers = document.querySelector("#line-numbershtml");
+            let lines = jsCode.split("\n");
+            let lineCount = lines.length;
+            let lineNumbersHtml = "";
+            for(let i = 0; i <= lineCount - 1; i++){
+                lineNumbersHtml += "<span>" + i + "</span>";
+            }
+            lineNumbers.innerHTML = lineNumbersHtml;
+        }
+
+        function checkLines(){
+            lineCounterJs();
+            lineCounterCss();
+            lineCounterHtml();
+        }
+
+        function runCounJs(){
+            lineCounterJs();
+            run();
+        }
+
+        function runCountCss(){
+            lineCounterCss();
+            run();
+        }
+
+        function runCountHtml(){
+            lineCounterHtml();
+            run();
+        }
+
+        document.querySelector("#html-code").addEventListener("keyup", runCountHtml);
+        document.querySelector("#css-code").addEventListener("keyup", runCountCss);
+        document.querySelector("#js-code").addEventListener("keyup", runCounJs);
+        window.addEventListener("load", checkLines);
+
+    
+        
+        
+
+    </script>
+
+</body>
+</html>
