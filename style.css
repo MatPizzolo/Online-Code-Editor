@@ -58,6 +58,11 @@ body {
     margin-right: 2%;
 }
 
+.last-tag {
+    width: 100%;
+    margin-right: 0;
+}
+
 .tagg {
     background-color: #ffffff;
     width: 100px;
