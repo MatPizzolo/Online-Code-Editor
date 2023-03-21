@@ -32,24 +32,18 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- <p> This is a project I made to ..</p> -->
+### Built With
+
+* [![HTML][HTML]][HTML-url]
+ [![Css][Css.com]][Css-url]
+ [![JS][Js]][Js-url]
+
+
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-* [![HTML][HTML]][HTML-url]
-* [![Css][Css.com]][Css-url]
-* [![JS][Js]][Js-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 
 
